@@ -1,6 +1,6 @@
 # Donation Management System
 
-This repository contains the implementation of a donation management system designed by Group L for the COMP3013 Database Management System course.
+This repository contains the implementation of a donation management system.
 
 ## Project Overview
 
@@ -36,7 +36,7 @@ The donation management system aims to provide an online platform where users ca
 
 ## ER Diagram
 
-![ER Diagram](path_to_er_diagram_image)
+![ER Diagram](![image](https://github.com/ffftuanxxx/Donation-Management-System/assets/107744308/ba3f233d-0365-49a3-8c6b-4ae0a252b914))
 
 The ER diagram illustrates the entities involved in the system and their relationships. Key entities include Users, Beneficiaries, Donations, Comments, and Administrators.
 
