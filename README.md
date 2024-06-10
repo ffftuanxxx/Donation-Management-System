@@ -82,7 +82,7 @@ To set up the project locally:
 5. Administrators can log in using a special link to manage users, beneficiaries, and comments.
 
 License
-This project is licensed under the Apache [License](#license). See the LICENSE file for more details.
+This project is licensed under the Apache [License](https://github.com/ffftuanxxx/Donation-Management-System/blob/main/LICENSE). See the LICENSE file for more details.
 
 ## 
 Feel free to modify the content to fit the specifics of your project better. Add any additional details that might be necessary for understanding or using the system.
