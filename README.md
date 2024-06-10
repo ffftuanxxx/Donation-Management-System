@@ -83,3 +83,6 @@ To set up the project locally:
 
 License
 This project is licensed under the Apache [License](#license). See the LICENSE file for more details.
+
+## 
+Feel free to modify the content to fit the specifics of your project better. Add any additional details that might be necessary for understanding or using the system.
