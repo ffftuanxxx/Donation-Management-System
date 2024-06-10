@@ -1,0 +1,222 @@
+*{
+    /* 初始化 */
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* 100%窗口高度 */
+    height: 100vh;
+    /* 弹性布局 居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 渐变背景 */
+    background: linear-gradient(200deg,#72afd3,#96fbc4);
+}
+.login-box{
+    /* 相对定位 */
+    position: relative;
+    width: 320px;
+}
+.input-box{
+    /* 弹性布局 垂直排列 */
+    display: flex;
+    flex-direction: column;
+}
+.input-box input{
+    height: 40px;
+    border-radius: 3px;
+    /* 缩进15像素 */
+    text-indent: 15px;
+    outline: none;
+    border: none;
+    margin-bottom: 15px;
+}
+.input-box input:focus{
+    outline: 1px solid lightseagreen;
+}
+.input-box button{
+    border: none;
+    height: 45px;
+    background-color: lightseagreen;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+/* 接下来是猫头鹰的样式 */
+.owl{
+    width: 211px;
+    height: 108px;
+    /* 背景图片 */
+    background: url("image/owl-login.png") no-repeat;
+    /* 绝对定位 */
+    position: absolute;
+    top: -100px;
+    /* 水平居中 */
+    left: 50%;
+    transform: translateX(-50%);
+}
+.owl .hand{
+    width: 34px;
+    height: 34px;
+    border-radius: 40px;
+    background-color: #472d20;
+    /* 绝对定位 */
+    position: absolute;
+    left: 12px;
+    bottom: -8px;
+    /* 沿Y轴缩放0.6倍（压扁） */
+    transform: scaleY(0.6);
+    /* 动画过渡 */
+    transition: 0.3s ease-out;
+}
+.owl .hand.hand-r{
+    left: 170px;
+}
+.owl.password .hand{
+    transform: translateX(42px) translateY(-15px) scale(0.7);
+}
+.owl.password .hand.hand-r{
+    transform: translateX(-42px) translateY(-15px) scale(0.7);
+}
+.owl .arms{
+    position: absolute;
+    top: 58px;
+    width: 100%;
+    height: 41px;
+    overflow: hidden;
+}
+.owl .arms .arm{
+    width: 40px;
+    height: 65px;
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    background: url("image/owl-login-arm.png") no-repeat;
+    transform: rotate(-20deg);
+    transition: 0.3s ease-out;
+}
+.owl .arms .arm.arm-r{
+    transform: rotate(20deg) scaleX(-1);
+    left: 158px;
+}
+.owl.password .arms .arm{
+    transform: translateY(-40px) translateX(40px);
+}
+.owl.password .arms .arm.arm-r{
+    transform: translateY(-40px) translateX(-40px) scaleX(-1);
+}
+
+ul li{
+    position: absolute;
+    border: 1px solid #fff;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    list-style: none;
+    opacity: 0;
+}
+.square li{
+    top: 40vh;
+    left: 60vw;
+    /* 执行动画：动画名 时长 线性的 无限次播放 */
+    animation: square 10s linear infinite;
+}
+.square li:nth-child(2){
+    top: 80vh;
+    left: 10vw;
+    /* 设置动画延迟时间 */
+    animation-delay: 2s;
+}
+.square li:nth-child(3){
+    top: 80vh;
+    left: 85vw;
+    /* 设置动画延迟时间 */
+    animation-delay: 4s;
+}
+.square li:nth-child(4){
+    top: 10vh;
+    left: 70vw;
+    /* 设置动画延迟时间 */
+    animation-delay: 6s;
+}
+.square li:nth-child(5){
+    top: 10vh;
+    left: 10vw;
+    /* 设置动画延迟时间 */
+    animation-delay: 8s;
+}
+.circle li{
+    bottom: 0;
+    left: 15vw;
+    /* 执行动画 */
+    animation: circle 10s linear infinite;
+}
+.circle li:nth-child(2){
+    left: 35vw;
+    /* 设置动画延迟时间 */
+    animation-delay: 2s;
+}
+.circle li:nth-child(3){
+    left: 55vw;
+    /* 设置动画延迟时间 */
+    animation-delay: 6s;
+}
+.circle li:nth-child(4){
+    left: 75vw;
+    /* 设置动画延迟时间 */
+    animation-delay: 4s;
+}
+.circle li:nth-child(5){
+    left: 90vw;
+    /* 设置动画延迟时间 */
+    animation-delay: 8s;
+}
+
+/* 定义动画 */
+@keyframes square {
+    0%{
+        transform: scale(0) rotateY(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(5) rotateY(1000deg);
+        opacity: 0;
+    }
+}
+@keyframes circle {
+    0%{
+        transform: scale(0) rotateY(0deg);
+        opacity: 1;
+        bottom: 0;
+        border-radius: 0;
+    }
+    100%{
+        transform: scale(5) rotateY(1000deg);
+        opacity: 0;
+        bottom: 90vh;
+        border-radius: 50%;
+    }
+}
+
+.container{
+    /* 相对定位 */
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 15px;
+    /* 弹性布局 垂直排列 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: 250px;
+    /* 阴影 */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+ .container span{
+    text-align: center;
+    float: left;
+    font-size: 14px;
+} 

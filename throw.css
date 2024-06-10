@@ -1,0 +1,8 @@
+p {
+    border: 3px solid black;
+    border-radius: 10px;
+    height: 100px;
+    width: 750px;
+    padding-left: 60px;
+    padding-top: 40px;
+  }
